@@ -7,7 +7,7 @@ nav {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   overflow: hidden;
-  background-color: #553E70;
+  background-color: #b92116;
   margin-top: -8px;
   padding-left: 10px;
   padding-bottom: 10px;
@@ -39,7 +39,7 @@ nav a {
 
 nav a:hover, .dropdown:hover .dropbtn {
   background-color: aliceblue;
-  color: #3F374D;
+  color: #923a2e;
 }
 
 .dropdown-content {
@@ -73,7 +73,7 @@ nav a:hover, .dropdown:hover .dropbtn {
     display: flex;
     justify-content: center;
     background-color: #f8ceec;
-    background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
+    background-image: linear-gradient(315deg, #b46ea0 0%, #8bcdeb 74%);
      
 
 
@@ -94,7 +94,7 @@ nav a:hover, .dropdown:hover .dropbtn {
     width: 1000px;
 
 
-    background-color:#ebe8e4 ;
+    background-color:#9b5f12 ;
 
 }
 
@@ -166,16 +166,16 @@ nav a:hover, .dropdown:hover .dropbtn {
   display: inline;
   position: relative;
   border: none;
-  background-color: #DBF2E5;
+  background-color: #3ee787;
   padding: 8px 15px;
   border-radius: 10px;
-  box-shadow: 3.5px 3.5px #9AC6AD;
+  box-shadow: 3.5px 3.5px #66faa6;
   font-size: 2.3vw;
 }
 
 .flexbox-item1 button:hover {
-      background-color: #EFD1D6;
-      box-shadow: 3.5px 3.5px #9D898C;
+      background-color: #ec937d;
+      box-shadow: 3.5px 3.5px #f07789;
   }
 
 
