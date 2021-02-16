@@ -13,11 +13,9 @@
 <header>
       <nav> 
       <a href="index.html">Home</a>
-      <a href="detector.html">Affirmation</a>
+      <a href="detector.html">Assertion</a>
       <div class="dropdown">
-       <button class="dropbtn">Steps
-       <i class="fa fa-caret-down"></i>
-       </button>
+       
        
       </div> 
         </nav>
@@ -25,10 +23,10 @@
 
 <body>
   <div class="opening">
-   <h1 class="welcome">Affirmation Camera</h1>
-   <h4>Click the listening button and read out loud the quote shown, then click next</h4>
+   <h1 class="camera">Confidence Camera</h1>
+   <h4>Click "begin", then click the listening button and read confidently the statement shown, then click next</h4>
   <div class="button-container">
-   <button type="button" onclick="init()" class="start" id="start">Start</button></div>
+   <button type="button" onclick="init()" class="start" id="start">Begin</button></div>
   <div class="webcam-container">
     <div class="posture" id="posture">
       <img src="" class="posturepic" id="posturepic"></div>
@@ -39,11 +37,11 @@
   <main>
       <div id="result"></div>
       <div class="buttons">
-      <button id="button" class="startbutton">Start listening</button>
+      <button id="button" class="listenbutton">Start listening</button>
       <p id="message" hidden aria-hidden="true">
-        Your browser doesn't support Speech Recognition. Sorry.
+        Your browser doesn't support Speech Recognition.
       </p>
-      <button id="checker" class="startbutton">Next</button>
+      <button id="checker" class="listenbutton">Next</button>
       </div>
     </main>
  <div id="label-container"></div>
@@ -52,17 +50,14 @@
 </body>
 
 
-<!-- CUT HTMLL -->
-<!-- The core Firebase JS SDK is always required and must be listed first -->
+
 <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
+
 <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-analytics.js"></script>
 
 <script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+ 
   var firebaseConfig = {
     apiKey: "AIzaSyCdYVxcjx-Po661OZKl_Gx9zw1cbum1kQw",
     authDomain: "self-esteem-a4542.firebaseapp.com",
@@ -72,14 +67,14 @@
     appId: "1:1038692427589:web:96229929c51e03592b002c",
     measurementId: "G-98GKSDGYEV"
   };
-  // Initialize Firebase
+ 
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
 
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
   <script>
-    // Initialize Firebase
+    
     var config = {apiKey: "AIzaSyCdYVxcjx-Po661OZKl_Gx9zw1cbum1kQw",
     authDomain: "self-esteem-a4542.firebaseapp.com",
     projectId: "self-esteem-a4542",
@@ -102,43 +97,40 @@
         const modelURL = URL + "model.json";
         const metadataURL = URL + "metadata.json";
 
-        // load the model and metadata
-        // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
-        // Note: the pose library adds a tmPose object to your window (window.tmPose)
+        
         model = await tmPose.load(modelURL, metadataURL);
         maxPredictions = model.getTotalClasses();
 
-        // Convenience function to setup a webcam
+       
         const size = 300;
-        const flip = true; // whether to flip the webcam
-        webcam = new tmPose.Webcam(size, size, flip); // width, height, flip
-        await webcam.setup(); // request access to the webcam
+        const flip = true; 
+        webcam = new tmPose.Webcam(size, size, flip); 
+        await webcam.setup(); 
         await webcam.play();
         window.requestAnimationFrame(loop);
 
-        // append/get elements to the DOM
+        
         const canvas = document.getElementById("canvas");
         canvas.width = size; canvas.height = size;
         ctx = canvas.getContext("2d");
         labelContainer = document.getElementById("label-container");
-        for (let i = 0; i < maxPredictions; i++) { // and class labels
+        for (let i = 0; i < maxPredictions; i++) { 
             labelContainer.appendChild(document.createElement("div"));
         }
-        // quote function
+        
         showQuote();
     }
 
     async function loop(timestamp) {
-        webcam.update(); // update the webcam frame
+        webcam.update(); 
         await predict();
         window.requestAnimationFrame(loop);
     }
 
     async function predict() {
-        // Prediction #1: run input through posenet
-        // estimatePose can take in an image, video or canvas html element
+        
         const { pose, posenetOutput } = await model.estimatePose(webcam.canvas);
-        // Prediction 2: run input through teachable machine classification model
+        
         const prediction = await model.predict(posenetOutput);
 
         for (let i = 0; i < maxPredictions; i++) {
@@ -154,22 +146,20 @@
             }
         }
 
-        // finally draw the poses
+        
         drawPose(pose);
     }
 
     function drawPose(pose) {
         if (webcam.canvas) {
             ctx.drawImage(webcam.canvas, 0, 0);
-            // draw the keypoints and skeleton
+            
             if (pose) {
-                //const minPartConfidence = 0.5;
-                //tmPose.drawKeypoints(pose.keypoints, minPartConfidence, ctx);
-                //tmPose.drawSkeleton(pose.keypoints, minPartConfidence, ctx);
+                
             }
         }
     }
-    // ------------------------start quote system ----------------
+   
     var arrayQuote = "";
     function showQuote() {
       var quote = ["I am capable", "I am strong", "I am inspirational", "I can do it", "I am unstoppable", "My dreams will become reality", "Nothing can stop me", "Everything is possible", "I can reach it", "I am powerful"]
@@ -178,7 +168,7 @@
       return(arrayQuote)
     }
 
-    //------------------------ Start voice detector thingy yey -------------------------------- 
+    
   
       window.addEventListener("DOMContentLoaded", () => {
         const button = document.getElementById("button");
@@ -231,7 +221,7 @@
         }
       });
 
-    // Detecting if what the user say is equal to da quote
+    
     document.getElementById("checker").addEventListener("click", checkCorrect);
 
     function checkCorrect(){
@@ -250,7 +240,7 @@
 
 
 
-  // ------------------ Firebase score. set up --------------------------------
+  
   var database = firebase.database();
 
 function readUserData(){
@@ -261,26 +251,7 @@ var userId = firebase.auth().currentUser.uid;
 });
 } 
 
-  //function writeUserData(score) {
-  //firebase.database().ref('users/' + userId).set({
-    //newScore = score
-  //});
-//}
 
-//var updateScore = firebase.database().ref('users/' + userId + 'newScore');
-//updateScore.on('value', (snapshot) => {
-  //console.log()
-//});
-
-
-  
-
-  
-
-     
-    
-
-  
 </script>
   
 </body>

@@ -1,12 +1,12 @@
 * {
- font-family: 'Yusei Magic', sans-serif;
+ font-family:  sans-serif;
 }
 
 nav {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   overflow: hidden;
-  background-color: #553E70;
+  background-color: #ce2b2b;
   margin-top: -8px;
   padding-left: 10px;
   padding-bottom: 10px;
@@ -14,7 +14,7 @@ nav {
 nav a {
   float: left;
   font-size: 1.5vw;
-  color: white;
+  color: rgb(80, 248, 212);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -68,7 +68,6 @@ nav a:hover, .dropdown:hover .dropbtn {
 }
 
 
-/*COMPANIES BG:*/
 body{
   color: #3F374D;
 }
@@ -87,9 +86,11 @@ a{
 
 
 
-/*COMPANIES STYLE*/
+
 body {
-  color: #3F374D;
+  color: #d6e928;
+  background-color: #170549;
+  
 }
 
 .opening{
@@ -99,19 +100,22 @@ body {
   text-align: center;
   width: 100%;
   flex-direction: column;
-  background-color: #77A4C8;
+  background-color: #170549;
+ 
 }
 
 .start {
   display: inline;
- background-color: #f8ceec;
-    background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
+  background-color: #a6e94f;
+  
+    background-image: linear-gradient(315deg, #32b611 0%, #75da56 74%);
   padding: 8px 30px;
   border: none;
   border-radius: 10px;
-  font-size: 2.3vw;
+  font-size: 3.2vw;
   font-family: 'Quicksand', sans-serif;
-  color: #3F374D;
+  color: #ec4528;
+  
 }
 
 .start:hover {
@@ -127,10 +131,10 @@ body {
   padding-bottom: 10px;
 }
 
-.welcome{
+.camera{
   padding: 5px 18px;
   border-radius: 30px;
-  color: white;
+  color: rgb(107, 211, 11);
   text-shadow: 3.5px 2px #D4BCAA;
 }
 
@@ -208,19 +212,19 @@ main {
   flex-direction: row;
 }
 
-.startbutton {
+.listenbutton {
   display: inline;
-  background-color: #f8ceec;
-    background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
+  background-color: #a6e94f;
+    background-image: linear-gradient(315deg, #1f880aa8 0%, #25e75f 74%);
   padding: 8px 30px;
   border: none;
   border-radius: 10px;
-  font-size: 1.5vw;
-  color: #3F374D;
+  font-size: 2.5vw;
+  color: #ec4528;
   margin-bottom: 20px;
 }
 
-.startbutton:hover {
+.listenbutton:hover {
   box-shadow: 3.5px 3.5px  #3F374D;;
 }
 

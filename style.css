@@ -1,7 +1,9 @@
 * {
  font-family: 'Yusei Magic', sans-serif;
 }
-
+h1{
+  font-size: 4.5vw;
+}
 
 nav {
   border-top-left-radius: 10px;
@@ -15,7 +17,7 @@ nav {
 nav a {
   float: left;
   font-size: 1.5vw;
-  color: rgb(247, 107, 107);
+  color: rgb(107, 247, 205);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -68,12 +70,12 @@ nav a:hover, .dropdown:hover .dropbtn {
   display: block;
 }
 
-.Info1{
+.About{
 
     display: flex;
     justify-content: center;
-    background-color: #f8ceec;
-    background-image: linear-gradient(315deg, #b46ea0 0%, #8bcdeb 74%);
+    background-color:170549;
+    
      
 
 
@@ -82,13 +84,9 @@ nav a:hover, .dropdown:hover .dropbtn {
     padding-top: 30px;
 }
 
-.Info1 img{
-    width: 40%;
-    margin-top: -50px;
-    
-}
 
-.Info1flex{
+
+.Info{
 
     display: flex;
     width: 1000px;
@@ -152,15 +150,7 @@ nav a:hover, .dropdown:hover .dropbtn {
   margin-bottom: 30px;
 }
 
-.flexbox-item-1 img{
-    width: 450px;
-    margin: 10px;
-    border-radius: 10px;
-    align-items: center;
-    justify-content: center;
-    min-height: 200px;
-    position: relative;
-}
+
 
 .flexbox-item1 button{
   display: inline;
@@ -218,7 +208,7 @@ text-decoration-line: none;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #6BAEBA;
+  background-color:;
   opacity: 85%;
   overflow: hidden;
   width: 100%;
@@ -242,11 +232,11 @@ text-decoration-line: none;
     display:flex;
     padding: 20px;
     height: 70px;
-    background-color: white;
+    background-color: rgb(251, 253, 92);
     float: left;
     width: 20%;
     border-radius: 8px;
-    border: 1px solid #e0deda;
+    border: 1px solid #dd9910;
   }
 
 .steps{  
@@ -254,38 +244,40 @@ text-decoration-line: none;
     padding-right: 20px;
     padding-top: 5px;
     padding-bottom: 10px;
-    color:  #3F374D;
+    color:  #ce229a;
+    
   }
 
 
-.step1{
-    margin-right: 8px;
+.stepa{
+    margin-right: 4px;
   }
 
-.step2{
-    margin-right: 8px;
+.stepb{
+    margin-right: 4px;
   }
 
-.step3{
-    margin-left: 8px;
+.stepc{
+    margin-left: 4px;
   }
 
-.step4{
-    margin-left: 8px;
+.stepd{
+    margin-left: 4px;
   }
 
 
-.feat-content:after {
+.info:after {
     content: "";
     display: table;
     clear: both;
   }
 
-  .feat-content{
+  .info{
     margin-top: 16px;
     color:  #3F374D ;
-    background-color: #f8ceec;
-    background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
+  background-color: #170549;
+ 
+    
     font-size: 20px;
     padding: 20px;
   }
@@ -320,4 +312,8 @@ a {
 
 .iteminfo {
   margin-top = 200px;
+}
+body{
+  background-color: #170549;
+  
 }
